@@ -1,0 +1,33 @@
+<html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Appending JS</title>
+	<style>
+	#btn{
+  				background-color: cyan;
+  				font-color: red;
+				}
+	</style>
+</head>
+<body>
+  <div class="container">
+    <ul id="first-ul"></ul>
+    <button id="btn">Load List Items</button>
+  </div>
+</body>
+ <script>
+ 				var arr = ["I", "AM", "THE", "BEST!"];
+				var ul =document.getElementById("first-ul");
+				var btn = document.getElementById("btn");
+				btn.addEventListener("click", function () {
+  				arr.forEach(function (e) {
+   				 var li = document.createElement("li");
+   				 li.innerText = e;
+  				  ul.append(li);
+ 				 });
+});
+
+ </script>
+</html>
